@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { GitMerge, BookOpen, CheckCircle, Circle, Award, Activity, RefreshCw, TrendingUp, XCircle } from 'lucide-react';
 import { content, referenceBooks } from '../data/content';
 
@@ -37,14 +37,43 @@ export const Module3: React.FC<Module3Props> = ({
   const [startCapital, setStartCapital] = useState(10000);
   const [riskPerTrade, setRiskPerTrade] = useState(2.0);
   
-  const [equityCurve, setEquityCurve] = useState<number[]>([]);
-  const [simStats, setSimStats] = useState<SimStats>({
-    finalEquity: 0,
-    netProfit: 0,
-    maxDrawdown: 0,
-    winCount: 0,
-    lossCount: 0,
+  const [initialData] = useState(() => {
+    let equity = 10000;
+    const curve: number[] = [equity];
+    let peak = equity;
+    let maxDD = 0;
+    let wins = 0;
+    let losses = 0;
+
+    for (let i = 0; i < 50; i++) {
+      const isWin = Math.random() * 100 < 40;
+      const riskAmount = equity * 0.02;
+      if (isWin) {
+        equity += riskAmount * 3.0;
+        wins++;
+      } else {
+        equity -= riskAmount;
+        losses++;
+      }
+      curve.push(equity);
+      if (equity > peak) peak = equity;
+      const dd = peak > 0 ? ((peak - equity) / peak) * 100 : 0;
+      if (dd > maxDD) maxDD = dd;
+    }
+    return {
+      curve,
+      stats: {
+        finalEquity: equity,
+        netProfit: equity - 10000,
+        maxDrawdown: maxDD,
+        winCount: wins,
+        lossCount: losses,
+      }
+    };
   });
+
+  const [equityCurve, setEquityCurve] = useState<number[]>(initialData.curve);
+  const [simStats, setSimStats] = useState<SimStats>(initialData.stats);
 
   const runSimulation = useCallback(() => {
     let equity = startCapital;
@@ -82,41 +111,6 @@ export const Module3: React.FC<Module3Props> = ({
     
     onComplete(true);
   }, [winRate, riskReward, tradeCount, startCapital, riskPerTrade, onComplete]);
-
-  // Run initial simulation on component mount
-  useEffect(() => {
-    // Run silently at start
-    let equity = 10000;
-    const curve: number[] = [equity];
-    let peak = equity;
-    let maxDD = 0;
-    let wins = 0;
-    let losses = 0;
-
-    for (let i = 0; i < 50; i++) {
-      const isWin = Math.random() * 100 < 40;
-      const riskAmount = equity * 0.02;
-      if (isWin) {
-        equity += riskAmount * 3.0;
-        wins++;
-      } else {
-        equity -= riskAmount;
-        losses++;
-      }
-      curve.push(equity);
-      if (equity > peak) peak = equity;
-      const dd = peak > 0 ? ((peak - equity) / peak) * 100 : 0;
-      if (dd > maxDD) maxDD = dd;
-    }
-    setEquityCurve(curve);
-    setSimStats({
-      finalEquity: equity,
-      netProfit: equity - 10000,
-      maxDrawdown: maxDD,
-      winCount: wins,
-      lossCount: losses,
-    });
-  }, []);
 
   const formatCurrency = (val: number): string => {
     const sign = val < 0 ? '-' : '';

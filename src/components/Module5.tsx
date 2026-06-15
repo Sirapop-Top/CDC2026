@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Coins, BookOpen, CheckCircle, Circle, Award, ArrowRightLeft, Settings2, Table2 } from 'lucide-react';
 import { content, referenceBooks } from '../data/content';
 
@@ -37,6 +37,24 @@ export const Module5: React.FC<Module5Props> = ({
     if (Math.abs(n) < 1e-10) return '0';
     if (Number.isInteger(n) && decimals <= 0) return n.toString();
     return parseFloat(n.toFixed(decimals)).toString();
+  };
+
+  const updateRates = (newBtcPrice?: number, newUsdToThb?: number) => {
+    const activeBtcPrice = newBtcPrice ?? btcPriceUsd;
+    const activeUsdToThb = newUsdToThb ?? usdToThb;
+    
+    if (newBtcPrice !== undefined) setBtcPriceUsd(newBtcPrice);
+    if (newUsdToThb !== undefined) setUsdToThb(newUsdToThb);
+
+    const btc = parseFloat(btcAmount);
+    if (!isNaN(btc)) {
+      const sats = btc * SATS_PER_BTC;
+      const usd = btc * activeBtcPrice;
+      const thb = usd * activeUsdToThb;
+      setSatsAmount(formatNum(sats, 0));
+      setUsdAmount(formatNum(usd, 2));
+      setThbAmount(formatNum(thb, 2));
+    }
   };
 
   const handleBtcChange = useCallback((val: string) => {
@@ -110,19 +128,6 @@ export const Module5: React.FC<Module5Props> = ({
     setUsdAmount(formatNum(usd, 2));
     onComplete(true);
   }, [btcPriceUsd, usdToThb, onComplete]);
-
-  // Handle rates changes, updating outputs
-  useEffect(() => {
-    const btc = parseFloat(btcAmount);
-    if (!isNaN(btc)) {
-      const sats = btc * SATS_PER_BTC;
-      const usd = btc * btcPriceUsd;
-      const thb = usd * usdToThb;
-      setSatsAmount(formatNum(sats, 0));
-      setUsdAmount(formatNum(usd, 2));
-      setThbAmount(formatNum(thb, 2));
-    }
-  }, [btcPriceUsd, usdToThb]);
 
   return (
     <div className="space-y-8 text-white pb-12">
@@ -244,7 +249,7 @@ export const Module5: React.FC<Module5Props> = ({
                     value={btcPriceUsd}
                     onChange={(e) => {
                       const v = parseFloat(e.target.value);
-                      if (!isNaN(v) && v > 0) setBtcPriceUsd(v);
+                      if (!isNaN(v) && v > 0) updateRates(v, undefined);
                     }}
                     className="w-24 bg-[#08090c] border border-[#202836] rounded px-2 py-1 text-white text-right focus:outline-none"
                   />
@@ -257,7 +262,7 @@ export const Module5: React.FC<Module5Props> = ({
                     step="0.01"
                     onChange={(e) => {
                       const v = parseFloat(e.target.value);
-                      if (!isNaN(v) && v > 0) setUsdToThb(v);
+                      if (!isNaN(v) && v > 0) updateRates(undefined, v);
                     }}
                     className="w-24 bg-[#08090c] border border-[#202836] rounded px-2 py-1 text-white text-right focus:outline-none"
                   />

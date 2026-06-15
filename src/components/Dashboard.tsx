@@ -54,6 +54,15 @@ const moduleInfo: Record<string, { en: string; th: string }> = {
   m6: { en: 'M6: Pro Tools', th: 'M6: เครื่องมือสะสมทุน' },
 };
 
+const moduleDetails: Record<string, { books: number; feature: { en: string; th: string } }> = {
+  m1: { books: 2, feature: { en: 'Psychology Quiz', th: 'แบบทดสอบจิตวิทยา' } },
+  m2: { books: 2, feature: { en: 'Chart Pattern Gallery', th: 'คลังแสดงรูปแบบกราฟ' } },
+  m3: { books: 2, feature: { en: 'Expectancy Simulator', th: 'ตัวจำลองค่าคาดหวัง' } },
+  m4: { books: 1, feature: { en: 'Position Sizer Calculator', th: 'เครื่องคำนวณขนาดไม้' } },
+  m5: { books: 1, feature: { en: 'BTC/Satoshi Converter', th: 'แปลงหน่วยบิตคอยน์' } },
+  m6: { books: 2, feature: { en: 'SIP Compounding Chart', th: 'กราฟดอกเบี้ยทบต้น' } },
+};
+
 const wisdomQuotes = [
   {
     en: "The goal of a successful trader is to make the best trades. Money is secondary.",
@@ -198,16 +207,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
           {(['m1', 'm2', 'm3', 'm4', 'm5', 'm6'] as const).map((key) => {
             const isComplete = !!completedModules[key];
             const color = moduleColors[key];
-
-            const moduleDetails: Record<string, { books: number; feature: { en: string; th: string } }> = {
-              m1: { books: 2, feature: { en: 'Psychology Quiz', th: 'แบบทดสอบจิตวิทยา' } },
-              m2: { books: 2, feature: { en: 'Chart Pattern Gallery', th: 'คลังแสดงรูปแบบกราฟ' } },
-              m3: { books: 2, feature: { en: 'Expectancy Simulator', th: 'ตัวจำลองค่าคาดหวัง' } },
-              m4: { books: 1, feature: { en: 'Position Sizer Calculator', th: 'เครื่องคำนวณขนาดไม้' } },
-              m5: { books: 1, feature: { en: 'BTC/Satoshi Converter', th: 'แปลงหน่วยบิตคอยน์' } },
-              m6: { books: 2, feature: { en: 'SIP Compounding Chart', th: 'กราฟดอกเบี้ยทบต้น' } },
-            };
-
             const detail = moduleDetails[key];
 
             return (

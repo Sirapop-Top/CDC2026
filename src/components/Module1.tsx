@@ -25,13 +25,7 @@ export const Module1: React.FC<Module1Props> = ({
   // Quiz States
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(isCompleted);
-  const [totalScore, setTotalScore] = useState(() => {
-    // Attempt to calculate if already completed
-    if (isCompleted) {
-      return 15; // default/mock passing score if completed already
-    }
-    return 0;
-  });
+  const [totalScore, setTotalScore] = useState(0);
 
   const handleSelectAnswer = (qId: number, score: number) => {
     setSelectedAnswers((prev) => ({

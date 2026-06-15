@@ -21,11 +21,6 @@ export interface PatternData {
   invalidation: Translation[];
 }
 
-export interface BookSummary {
-  title: Translation;
-  author: Translation;
-  keyPoints: Translation[];
-}
 
 export interface ContentType {
   meta: {
@@ -734,14 +729,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Getting wealthy vs. staying wealthy require completely different skillsets.",
-        "Compounding works best when you give it decades to work.",
-        "Room for error: Leave a gap between what you expect and what could go wrong."
+        "Getting wealthy vs. staying wealthy require completely different skillsets: building wealth takes risk and optimism, while keeping it requires humility and fear of losing it.",
+        "Compounding works best when you give it decades to work; the secret of Warren Buffett’s wealth is the length of time he has been investing.",
+        "Room for error (Margin of Safety): Leave a gap between what you expect to happen and what could go wrong to survive the inevitable storms.",
+        "Controlling your time is the highest dividend money pays; the ability to do what you want, when you want, with whom you want, is priceless.",
+        "Wealth is what you don't see; it's the cars not purchased, the diamonds not bought. It is financial assets that haven't yet been converted into stuff.",
+        "Being reasonable is more effective than being rational; do not aim for the mathematically optimal strategy, aim for the one that lets you sleep at night.",
+        "Nothing is free; everything has a price, but for investing, the price is not in dollars, it is in volatility, fear, doubt, uncertainty, and regret.",
+        "Your personal experience with money represents 0.00000001% of what has happened in the world, but 80% of how you think the world works.",
+        "Manias and bubbles occur because investors with different time horizons start playing different games on the same asset.",
+        "The hardest financial skill is getting the goalpost to stop moving; comparing yourself to others is the root of poor financial decisions."
       ],
       th: [
-        "การสร้างความมั่งคั่งและการรักษาความมั่นคงต้องการทักษะที่ต่างกันโดยสิ้นเชิง",
-        "ผลตอบแทนทบต้นจะทำงานได้ดีที่สุดเมื่อคุณให้เวลามันนานเป็นทศวรรษ",
-        "พื้นที่เผื่อเหลือเผื่อขาด (Room for Error): จงเว้นระยะห่างระหว่างจุดที่คาดหวังกับจุดที่ผิดพลาดได้"
+        "การสร้างความมั่งคั่งและการรักษาความมั่นคงต้องการทักษะที่ต่างกันโดยสิ้นเชิง: การสร้างต้องใช้การกล้าเสี่ยงและการมองโลกในแง่ดี แต่การรักษาต้องใช้ความนอบน้อมและความกลัวที่จะสูญเสียมันไป",
+        "ผลตอบแทนทบต้นจะทำงานได้ดีที่สุดเมื่อคุณให้เวลามันนานเป็นทศวรรษ: เคล็ดลับความมั่งคั่งของ Warren Buffett คือระยะเวลาอันยาวนานที่เขาลงทุนมาอย่างต่อเนื่อง",
+        "พื้นที่เผื่อเหลือเผื่อขาด (Margin of Safety): จงเว้นระยะห่างระหว่างจุดที่คาดหวังกับจุดที่ผิดพลาดได้ เพื่อให้สามารถเอาตัวรอดจากพายุที่หลีกเลี่ยงไม่ได้",
+        "การควบคุมเวลาของตัวเองคือปันผลสูงสุดที่เงินมอบให้: ความสามารถในการทำสิ่งที่อยากทำ เมื่อไรก็ได้ กับใครก็ได้ เป็นสิ่งที่มีค่ามากที่สุดอย่างประเมินไม่ได้",
+        "ความมั่งคั่งคือสิ่งที่คุณมองไม่เห็น: มันคือรถหรูที่คุณไม่ได้ซื้อ อัญมณีที่คุณไม่ได้ครอบครอง มันคือสินทรัพย์ทางการเงินที่ยังไม่ได้ถูกเปลี่ยนเป็นสิ่งของอวดคนอื่น",
+        "การมีเหตุผลที่จับต้องได้สำคัญกว่าการยึดติดตรรกะแบบคณิตศาสตร์: อย่าพยายามหาแผนการเทรดที่ได้ตัวเลขดีที่สุดตามสูตร แต่จงเลือกแผนที่ช่วยให้คุณนอนหลับสบายในทุกค่ำคืน",
+        "ไม่มีอะไรได้มาฟรีๆ: ทุกอย่างมีราคาที่ต้องจ่าย แต่สำหรับการลงทุน ราคานั้นไม่ใช่เงินตรา ทว่าคือความผันผวน ความกลัว ความสงสัย ความไม่แน่นอน และความเสียดาย",
+        "ประสบการณ์ส่วนตัวของคุณเกี่ยวกับเงินคิดเป็นเพียง 0.00000001% ของสิ่งที่เกิดขึ้นบนโลก แต่กลับควบคุมความเชื่อของคุณถึง 80% ว่าโลกการเงินทำงานอย่างไร",
+        "วิกฤตฟองสบู่เกิดขึ้นเพราะนักลงทุนที่มีกรอบเวลาต่างกัน เข้ามาเล่นเกมที่แตกต่างกันในสินทรัพย์ชนิดเดียวกัน",
+        "ทักษะทางการเงินที่ยากที่สุดคือการหยุดเลื่อนเป้าหมายออกไปเรื่อยๆ: การเอาตัวเองไปเปรียบเทียบกับผู้อื่นคือจุดเริ่มต้นของการตัดสินใจทางการเงินที่ผิดพลาด"
       ]
     }
   },
@@ -756,14 +765,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "The market outcome is uncertain and there is a random distribution of wins and losses.",
-        "An edge is nothing more than an indication of a higher probability of one thing happening over another.",
-        "To trade effectively, you must completely accept the risk before executing."
+        "The market outcome is uncertain and there is a random distribution of wins and losses for any given edge.",
+        "An edge is nothing more than an indication of a higher probability of one thing happening over another; it does not guarantee the outcome of the next trade.",
+        "To trade effectively, you must completely accept the risk before executing; if you are afraid, you will misinterpret market information.",
+        "You do not need to know what is going to happen next in order to make money; trading is a game of probabilities, not predictions.",
+        "Every moment in the market is unique; even if a pattern looks identical to a past setup, the underlying participants are different.",
+        "The professional trader operates in a state of mind free of fear, anger, or overconfidence, aligning completely with the flow of the market.",
+        "Beliefs determine how we perceive information; you must train your mind to think in terms of five fundamental truths about market probability.",
+        "Expectation management is critical: if you expect the market to behave in a certain way, you set yourself up for emotional pain when it doesn't.",
+        "Self-discipline and mental consistency are far more important than any technical analysis tool or trading methodology.",
+        "The ultimate goal is to become a 'consistently successful trader' by eliminating self-sabotaging beliefs and focusing entirely on execution."
       ],
       th: [
-        "ผลลัพธ์ของตลาดนั้นไม่แน่นอน และสถิติแพ้ชนะจะกระจายตัวอย่างสุ่มเสมอ",
-        "หน้าเทรดที่ได้เปรียบ (Edge) เป็นเพียงแค่ตัวระบุว่ามีโอกาสเกิดเหตุการณ์หนึ่งมากกว่าอีกเหตุการณ์หนึ่งเท่านั้น",
-        "หากต้องการเทรดให้มีประสิทธิภาพ คุณต้องยอมรับความเสี่ยงของไม้นั้นๆ ก่อนจะกดปุ่มส่งคำสั่ง"
+        "ผลลัพธ์ของตลาดนั้นไม่แน่นอน และสถิติแพ้ชนะจะกระจายตัวอย่างสุ่มเสมอในทุกๆ หน้าเทรด",
+        "หน้าเทรดที่ได้เปรียบ (Edge) เป็นเพียงแค่ตัวระบุว่ามีโอกาสเกิดเหตุการณ์หนึ่งมากกว่าอีกเหตุการณ์หนึ่งเท่านั้น ไม่สามารถรับประกันผลลัพธ์ของไม้ถัดไปได้",
+        "หากต้องการเทรดให้มีประสิทธิภาพ คุณต้องยอมรับความเสี่ยงของไม้นั้นๆ ก่อนจะกดปุ่มส่งคำสั่ง: หากคุณยังมีความกลัว คุณจะบิดเบือนข้อมูลจากตลาด",
+        "คุณไม่จำเป็นต้องรู้ล่วงหน้าว่าสิ่งใดจะเกิดขึ้นต่อไปเพื่อที่จะทำกำไร: การเทรดคือเกมแห่งความน่าจะเป็น ไม่ใช่เกมแห่งการทำนายอนาคต",
+        "ทุกช่วงเวลาในตลาดมีเอกลักษณ์เฉพาะตัว: แม้รูปแบบกราฟจะเหมือนกับในอดีต แต่ผู้เล่นในตลาด ณ ขณะนั้นเป็นคนละกลุ่มกันโดยสิ้นเชิง",
+        "นักเทรดมืออาชีพจะทำงานในสภาวะจิตใจที่ไร้ความกลัว ความโกรธ หรือการมั่นใจตัวเองมากเกินไป โดยสอดประสานไปกับการไหลของตลาดอย่างเป็นธรรมชาติ",
+        "ความเชื่อเป็นตัวกำหนดวิธีที่เราตีความข้อมูล: คุณต้องฝึกฝนจิตใจให้คิดผ่านสัจธรรม 5 ประการเกี่ยวกับความน่าจะเป็นของตลาด",
+        "การจัดการความคาดหวังเป็นสิ่งสำคัญยิ่ง: หากคุณคาดหวังให้ตลาดต้องเคลื่อนไหวตามใจคิด คุณกำลังนำพาตัวเองไปสู่อารมณ์เจ็บปวดเมื่อตลาดเฉลยตรงกันข้าม",
+        "วินัยในตนเองและความสม่ำเสมอทางอารมณ์มีความสำคัญเหนือกว่าเครื่องมือวิเคราะห์ทางเทคนิคหรือสูตรคำนวณใดๆ",
+        "เป้าหมายสูงสุดคือการเป็นนักเทรดที่ประสบความสำเร็จอย่างยั่งยืน ด้วยการขจัดความเชื่อที่บ่อนทำลายตนเองและมุ่งเน้นไปที่การควบคุมแผนการเทรดเท่านั้น"
       ]
     }
   },
@@ -778,14 +801,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Market action discounts everything: all fundamentals are reflected in the price.",
-        "Prices move in trends, and trends are more likely to continue than to reverse.",
-        "History repeats itself: human psychology creates repeating geometric structures."
+        "Market action discounts everything: all fundamental, political, and psychological factors are reflected in the price.",
+        "Prices move in trends, and a trend in motion is more likely to continue than to reverse until clear reversal patterns appear.",
+        "History repeats itself: human psychology is stable, creating repeating chart patterns and geometric structures over time.",
+        "Support and resistance represent memory in the market; they are price zones where buyers and sellers find equilibrium.",
+        "Volume must confirm the trend: volume should expand in the direction of the major trend and contract during corrections.",
+        "The trend line is one of the simplest and most effective technical tools; a breakout of a trendline often signals a change in trend.",
+        "Reversal patterns (like Head & Shoulders, Double Tops) signify transition periods in market psychology before a trend shift.",
+        "Continuation patterns (like Flags, Pennants) indicate temporary pauses in trend direction before the market resumes its path.",
+        "Moving averages smooth out price data to identify trends, but they are lagging indicators and perform poorly in sideways markets.",
+        "Multi-timeframe analysis is essential: always analyze the long-term charts first to get a broader perspective before entering on short-term charts."
       ],
       th: [
-        "พฤติกรรมตลาดสะท้อนข้อมูลทุกอย่างแล้ว: ข้อมูลพื้นฐานจะถูกหักกลบไปในตัวเลขราคาเรียบร้อย",
-        "ราคามักจะวิ่งไปตามเทรนด์ และแนวโน้มเดิมมีโอกาสไปต่อมากกว่าที่จะสลับตัวเปลี่ยนทิศ",
-        "ประวัติศาสตร์ซ้ำรอยเสมอ: จิตวิทยามนุษย์สร้างโครงสร้างเรขาคณิตที่ซ้ำรอยเดิม"
+        "พฤติกรรมตลาดสะท้อนข้อมูลทุกอย่างแล้ว: ข้อมูลพื้นฐาน การเมือง และจิตวิทยาฝูงชนจะถูกหักกลบไปในตัวเลขราคาเรียบร้อย",
+        "ราคามักจะวิ่งไปตามเทรนด์ และแนวโน้มเดิมมีโอกาสไปต่อมากกว่าที่จะสลับตัวเปลี่ยนทิศ จนกว่าจะมีสัญญาณกลับตัวที่ชัดเจน",
+        "ประวัติศาสตร์ซ้ำรอยเสมอ: จิตวิทยามนุษย์มีความคงเส้นคงวา ทำให้เกิดรูปแบบกราฟและโครงสร้างเรขาคณิตที่ซ้ำรอยเดิมตามกาลเวลา",
+        "แนวรับและแนวต้านคือความทรงจำของตลาด: เป็นโซนราคาที่แรงซื้อและแรงขายเกิดการปะทะและปรับสมดุล",
+        "ปริมาณการซื้อขาย (Volume) ต้องยืนยันเทรนด์: วอลุ่มควรเพิ่มขึ้นในทิศทางเดียวกับเทรนด์หลัก และลดลงในช่วงที่มีการปรับฐานพักตัว",
+        "เส้นแนวโน้ม (Trend Line) เป็นเครื่องมือทางเทคนิคที่ง่ายและทรงพลังที่สุด: การหลุดเส้นแนวโน้มมักบ่งบอกถึงการเปลี่ยนแนวโน้มหลัก",
+        "รูปแบบการกลับตัว (Reversal Patterns เช่น Head & Shoulders, Double Tops) แสดงถึงช่วงเปลี่ยนผ่านของจิตวิทยาตลาดก่อนจะเปลี่ยนทิศทาง",
+        "รูปแบบไปต่อ (Continuation Patterns เช่น Flags, Pennants) แสดงถึงการพักตัวชั่วคราวเพื่อสะสมพลังก่อนที่ราคาจะวิ่งไปตามแนวโน้มเดิม",
+        "เส้นค่าเฉลี่ยเคลื่อนที่ (Moving Averages) ช่วยกรองความผันผวนเพื่อหาแนวโน้ม แต่เป็นอินดิเคเตอร์ที่ช้ากว่าราคา (Lagging) และไม่มีประสิทธิภาพในตลาดไซด์เวย์",
+        "การวิเคราะห์หลายกรอบเวลา (Multi-timeframe Analysis) เป็นสิ่งจำเป็น: ควรวิเคราะห์กราฟระยะยาวก่อนเพื่อหาภาพรวม แล้วค่อยหาจุดเข้าในกราฟระยะสั้น"
       ]
     }
   },
@@ -800,14 +837,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Motive Wave rules: Wave 3 is never the shortest wave, and Wave 4 never enters Wave 1 territory.",
-        "Corrective Waves shape simple or complex structures (Zigzags, Flats, Triangles).",
-        "Fibonacci ratio guidelines: Waves project extensions and retracements matching Golden Ratios."
+        "Motive Wave rules: Wave 3 is never the shortest among the active waves, and Wave 4 never enters Wave 1 price territory.",
+        "Corrective Waves shape simple or complex structures (Zigzags, Flats, Triangles, and Combinations) to relieve market extension.",
+        "Fibonacci ratios guide wave calculations: wave structures project extensions and retracements matching Golden Ratios like 61.8% and 161.8%.",
+        "The Wave Principle shows that crowd behavior is structured and moves in recognizable fractals across all scales of time.",
+        "Wave 1 and Wave 5 are often equal in length or relate by Fibonacci proportions when Wave 3 is the extended wave.",
+        "Wave 2 corrections are usually deep, retracing 50% to 78.6% of Wave 1, while Wave 4 corrections are typically shallow (38.2%).",
+        "The Principle of Alternation states that if Wave 2 is sharp and simple, Wave 4 will likely be sideways, complex, and time-consuming.",
+        "Channeling is a key tool: parallel trendlines drawn across wave peaks and troughs help project the targets of future waves.",
+        "Personality of waves: each wave has a psychological tone (e.g., Wave 3 represents peak momentum and optimism; Wave 5 is divergence and exhaustion).",
+        "The Elliott Wave Principle is a map of market psychology, not a predictive crystal ball; it provides context and potential scenarios."
       ],
       th: [
-        "กฎเหล็กคลื่นขับเคลื่อนหลัก: คลื่น 3 ต้องไม่ใช่คลื่นที่สั้นที่สุด และคลื่น 4 ต้องไม่ย่อลึกเข้ามาเหลื่อมกับพื้นที่ของคลื่น 1",
-        "คลื่นปรับฐานย่อตัวมีทั้งรูปแบบง่ายและซับซ้อน (Zigzags, Flats, Triangles)",
-        "ตัวเลขสัดส่วนฟิโบนัชชี: คลื่นจะมีความยาวสัมพันธ์กับสัดส่วนทองคำฟิโบนัชชีอย่างมีนัยสำคัญ"
+        "กฎเหล็กคลื่นขับเคลื่อนหลัก: คลื่น 3 ต้องไม่ใช่คลื่นที่สั้นที่สุดในบรรดาคลื่นส่ง และคลื่น 4 ต้องไม่ย่อลึกเข้ามาเหลื่อมกับพื้นที่ของคลื่น 1",
+        "คลื่นปรับฐานย่อตัวมีทั้งรูปแบบง่ายและซับซ้อน (Zigzags, Flats, Triangles และแบบผสม) เพื่อช่วยลดความร้อนแรงของราคาก่อนหน้า",
+        "ตัวเลขสัดส่วนฟิโบนัชชีคือหัวใจการคำนวณคลื่น: คลื่นจะมีความยาวและระยะย่อสัมพันธ์กับสัดส่วนทองคำฟิโบนัชชี เช่น 61.8% และ 161.8%",
+        "ทฤษฎีคลื่นเอลเลียตชี้ให้เห็นว่าพฤติกรรมฝูงชนมีโครงสร้างเป็นระเบียบย่อยลงไปเรื่อยๆ (Fractals) ในทุกๆ กรอบเวลา",
+        "ความยาวของคลื่น 1 และคลื่น 5 มักจะเท่ากันหรือสัมพันธ์กันด้วยสัดส่วนฟิโบนัชชี หากคลื่น 3 เป็นคลื่นที่ยืดตัวออกไปมากที่สุด (Extension)",
+        "การปรับฐานของคลื่น 2 มักจะย่อตัวลึก (50% ถึง 78.6% ของคลื่น 1) ขณะที่การปรับฐานของคลื่น 4 มักจะย่อตัวตื้นและกินเวลานาน (38.2%)",
+        "กฎการสลับตัว (Principle of Alternation): หากคลื่น 2 ปรับตัวลงลึกและรวดเร็ว คลื่น 4 มักจะวิ่งออกข้าง ช้า ซับซ้อน และไม่ลงลึก",
+        "การตีช่องขนาน (Channeling) เป็นเครื่องมือสำคัญ: เส้นแนวโน้มคู่ขนานที่ตีผ่านจุดยอดและฐานของคลื่นจะช่วยระบุเป้าหมายคลื่นถัดไปได้แม่นยำขึ้น",
+        "ลักษณะนิสัยของแต่ละคลื่นสะท้อนจิตวิทยาคนละขั้ว: คลื่น 3 คือจุดที่โมเมนตัมพุ่งแรงที่สุดและทุกคนมองบวก คลื่น 5 คือจุดที่สัญญาณขัดแย้ง (Divergence) และหมดแรงส่ง",
+        "ทฤษฎีเอลเลียตเวฟคือแผนที่นำทางของจิตวิทยาฝูงชน ไม่ใช่ลูกแก้วพยากรณ์: หน้าที่หลักคือการให้บริบทและสร้างสมมติฐานทางเลือกที่มีความเป็นไปได้สูง"
       ]
     }
   },
@@ -822,14 +873,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Focus on system Expectancy using R-multiples rather than searching for high Win Rates.",
-        "A system must define distinct exits for cutting losses and lock-in returns.",
-        "Avoid psychological traps of thinking you must predict market directions."
+        "Focus on system Expectancy using R-multiples (risk-multiples) rather than searching for high Win Rates; a 40% win rate can be highly profitable if your wins are large.",
+        "A trading system must define distinct, objective exits for both cutting losses quickly and locking in profitable returns.",
+        "Avoid psychological traps of thinking you must predict market directions; success comes from managing risk, not having perfect forecasts.",
+        "Position sizing is the most critical component of a trading system, accounting for up to 90% of the variance in trading performance.",
+        "The 'Holy Grail' in trading does not exist outside; it is a metaphor for finding a system that fits your own unique personality and psychology.",
+        "The Golden Rule of trading: Cut your losses short, and let your profits run. Protect your capital above all else.",
+        "Every trade should be measured in terms of R, where R is the initial risk. A successful trade can yield +3R, +5R, or more.",
+        "Understand the difference between high-probability setups and high-expectancy setups; expectancy is the average amount you win per dollar risked.",
+        "Backtesting must be done carefully to avoid overfitting (curve-fitting) a system to historical data that won't work in the future.",
+        "The ultimate responsibility for your trading results lies with you; do not blame the market or indicators for trading failures."
       ],
       th: [
-        "โฟกัสที่ค่าคาดหวังผลกำไรของระบบ (Expectancy) อิงตัวคูณความเสี่ยง R มากกว่าไล่ตามอัตราชนะสูงๆ",
-        "ระบบเทรดต้องกำหนดจุดขายออกเพื่อตัดขาดทุนและล็อกกำไรที่ชัดเจนอย่างเป็นวัตถุประสงค์",
-        "หลีกเลี่ยงกับดักจิตวิทยาที่คิดว่าตัวเราต้องรู้ทิศทางในอนาคตของตลาดก่อนเทรด"
+        "โฟกัสที่ค่าคาดหวังผลกำไรของระบบ (Expectancy) อิงตัวคูณความเสี่ยง R มากกว่าอัตราชนะสูงๆ: อัตราชนะเพียง 40% ก็ทำกำไรมหาศาลได้หากเวลาชนะได้คำใหญ่",
+        "ระบบเทรดต้องกำหนดจุดขายออกเพื่อตัดขาดทุนและล็อกกำไรที่ชัดเจนและเป็นวัตถุประสงค์โดยปราศจากอคติส่วนตัว",
+        "หลีกเลี่ยงกับดักจิตวิทยาที่คิดว่าตัวเราต้องรู้ทิศทางในอนาคตของตลาดก่อนเทรด: ความสำเร็จมาจากการบริหารความเสี่ยง ไม่ใช่ความแม่นยำในการคาดเดา",
+        "การกำหนดขนาดตำแหน่งเทรด (Position Sizing) คือส่วนประกอบที่สำคัญที่สุดของระบบ คิดเป็น 90% ของความแปรปรวนในผลตอบแทนทั้งหมด",
+        "\"จอกศักดิ์สิทธิ์\" (Holy Grail) ไม่มีอยู่ภายนอก: มันเป็นเพียงอุปมาอุปไมยของการค้นหาระบบเทรดที่สอดคล้องกับบุคลิกภาพและจิตวิทยาของตัวคุณเอง",
+        "กฎทองของการเทรด: ตัดขาดทุนให้สั้น และปล่อยให้กำไรรันตัวต่อ (Cut losses short, let profits run) ปกป้องเงินทุนหลักไว้เหนือสิ่งอื่นใด",
+        "ทุกๆ การเทรดควรวัดผลในหน่วยของ \"R\" (ความเสี่ยงเริ่มต้น): การเทรดที่ดีจะต้องสร้างผลตอบแทนที่เป็นบวกหลายเท่าของความเสี่ยง เช่น +3R หรือ +5R",
+        "เข้าใจความแตกต่างระหว่างจุดเข้าเทรดที่มีโอกาสชนะสูง (High Probability) กับจุดที่มีสัดส่วนผลตอบแทนสูง (High Expectancy)",
+        "การทดสอบระบบย้อนหลัง (Backtesting) ต้องระวังกับดักการปรับแต่งระบบให้ดีเกินจริงกับข้อมูลอดีต (Overfitting) ซึ่งจะล้มเหลวในตลาดจริง",
+        "ผลลัพธ์จากการเทรดทั้งหมดเป็นความรับผิดชอบของคุณแต่เพียงผู้เดียว: อย่าโทษตลาดหรือระบบเมื่อเกิดความสูญเสีย แต่จงเรียนรู้และปรับปรุงตัวเราเอง"
       ]
     }
   },
@@ -844,14 +909,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Series variables: Every price indicator behaves as an array of historical values.",
-        "Backtesting execution engine: Simulates trade performance dynamically on historical bars.",
-        "CDC ActionZone logic: Code signal indicators using moving average color transitions."
+        "Series variables: Every price and indicator behaves as an array of historical values, indexed backward from the current bar using the `[]` operator.",
+        "Backtesting execution engine: The `strategy` function simulates trade performance dynamically on historical bars, accounting for margins and slippage.",
+        "CDC ActionZone logic: Code signal indicators using moving average crossovers (e.g., EMA12 and EMA26) combined with visual color transitions.",
+        "Code execution flows line by line, bar by bar, from the oldest bar on the chart to the most current real-time bar.",
+        "Pine Script supports both `indicator` (for drawing signals and lines) and `strategy` (for simulating and backtesting trades) types.",
+        "Execution behavior changes between historical bars (executed once per bar close) and real-time bars (executed on every price tick).",
+        "Use security function `request.security` to pull data from other timeframes or other assets, being careful to avoid future leaks (lookahead bias).",
+        "Custom user-defined functions and libraries allow for modular code, code reuse, and cleaner scripting structure.",
+        "Draw objects (lines, boxes, labels) can be dynamically created and updated on the chart to mark key levels, support/resistance, or wave tags.",
+        "Alert triggers can be set using `alertcondition` or `alert` functions to send automated Webhook notifications to trading bots or messengers."
       ],
       th: [
-        "ตัวแปรประเภทอนุกรม (Series): ทุกๆ อินดิเคเตอร์ราคาจะทำงานในรูปของอาร์เรย์ค่าข้อมูลอดีต",
-        "กลไกทดสอบย้อนหลัง (Backtest): จำลองผลลัพธ์คำสั่งซื้อขายแบบจำลองบนแท่งเทียนในอดีต",
-        "หลักตรรกะระบบ CDC ActionZone: เขียนรหัสสัญญาณโดยใช้การตัดกันและการสลับสีของเส้นค่าเฉลี่ย"
+        "ตัวแปรประเภทอนุกรม (Series): ทุกๆ อินดิเคเตอร์ราคาจะทำงานในรูปของอาร์เรย์ค่าข้อมูลอดีต โดยใช้ตัวดึงค่ากลับ `[]` เพื่อย้อนหลังทีละแท่งเทียน",
+        "กลไกทดสอบย้อนหลัง (Backtest): ฟังก์ชันประเภท `strategy` จำลองผลลัพธ์คำสั่งซื้อขายแบบเรียลไทม์บนแท่งเทียนในอดีต โดยคำนวณค่าคอมมิชชันและค่าคลาดเคลื่อน (Slippage) ได้",
+        "หลักตรรกะระบบ CDC ActionZone: เขียนรหัสสัญญาณโดยใช้การตัดกันและการสลับสีของเส้นค่าเฉลี่ย (เช่น EMA12 ตัด EMA26) เพื่อเปลี่ยนสีกราฟเป็นแดง/เขียว",
+        "รหัสคำสั่งจะทำงานไล่ไปทีละบรรทัด และไล่ไปทีละแท่งเทียน (Bar by Bar) ตั้งแต่แท่งที่เก่าแก่ที่สุดในอดีตไปจนถึงแท่งปัจจุบัน",
+        "Pine Script แยกประเภทการใช้งานระหว่าง `indicator` (ใช้สำหรับพล็อตภาพและสัญญาณบนกราฟ) และ `strategy` (ใช้สำหรับการทดสอบจำลองส่งคำสั่งซื้อขาย)",
+        "ความต่างของการประมวลผล: แท่งเทียนอดีตจะรันโปรแกรมเมื่อปิดแท่งครั้งเดียว ทว่าแท่งเทียนปัจจุบันจะรันซ้ำทุกครั้งที่ราคาขยับ (Tick)",
+        "ใช้ฟังก์ชัน `request.security` เพื่อดึงข้อมูลข้ามกรอบเวลาหรือดึงข้อมูลสินทรัพย์อื่น โดยต้องระวังไม่ให้เกิดการส่องอนาคตล่วงหน้า (Lookahead Bias)",
+        "การเขียนฟังก์ชันขึ้นเองและใช้ Libraries ช่วยให้โค้ดมีความเป็นโมดูลาร์ นำกลับมาใช้ซ้ำได้ง่าย และทำให้โครงสร้างโค้ดเป็นระเบียบเรียบร้อย",
+        "ออบเจกต์วาดภาพ (Lines, Boxes, Labels) สามารถสร้างและเปลี่ยนแปลงได้อัตโนมัติบนกราฟเพื่อระบุระดับราคาสำคัญ หรือตำแหน่งระบุคลื่น",
+        "การสร้างสัญญาณเตือนภัย (Alerts) ผ่านฟังก์ชัน `alert` หรือ `alertcondition` สามารถใช้ส่ง Webhook ไปยังบอทเทรดหรือไลน์แจ้งเตือนเพื่อเทรดอัตโนมัติได้"
       ]
     }
   },
@@ -866,14 +945,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Sizing defines 'how much' to hold, which determines risk of ruin during drawdowns.",
-        "CPR Model: Capital at Risk = (Entry Price - Stop Loss Price) * Position Units.",
-        "Anti-martingale models increase position sizes during wins and cut sizes during losses."
+        "Position sizing defines 'how much' to buy or sell, which directly determines the probability of ruin during drawdowns.",
+        "CPR Model: Core formula states that Capital at Risk = (Entry Price - Stop Loss Price) * Position Units, protecting capital from unexpected volatility.",
+        "Anti-martingale models increase position sizes during wins and decrease them during losses, maximizing compounding while limiting drawdown.",
+        "Never risk more than a small, fixed percentage of your account (e.g., 1% or 2%) on a single trade to survive consecutive losses.",
+        "Volatility-based sizing (such as using Average True Range) adjusts position sizes based on market noise to give trades room to breathe.",
+        "The difference between survival and bankruptcy is not the entry signal, but the sizing strategy used during a losing streak.",
+        "Leverage is a double-edged sword; position sizing dictates how much leverage is appropriate without triggering margin calls.",
+        "Fixed Fractional sizing keeps the risk constant relative to the current account equity, scaling up or down as the account size changes.",
+        "Market correlation must be factored into sizing; holding multiple correlated assets increases total portfolio risk significantly.",
+        "The ultimate metric of a position sizing model is its ability to let you sleep at night during the worst historical drawdown periods."
       ],
       th: [
-        "การกำหนดขนาดระบุว่าควรส่งคำสั่งเป็นจำนวน 'เท่าไร' ซึ่งช่วยสกัดกั้นโอกาสล้างพอร์ตช่วงเบิกถอนเงินทุนย่อตัว",
-        "สูตรโมเดล CPR: ทุนที่เสี่ยง (Capital at Risk) = (ราคาเข้าซื้อ - ราคา Stop Loss) * ปริมาณสัญญายูนิต",
-        "โมเดลตรงข้ามมาร์ติงเกล (Anti-Martingale) จะเพิ่มขนาดไม้ช่วงพอร์ตชนะและหั่นขนาดไม้ลงช่วงพอร์ตแพ้"
+        "การกำหนดขนาดตำแหน่งเทรด (Position Sizing) ระบุว่าควรส่งคำสั่งเป็นจำนวน 'เท่าไร' ซึ่งช่วยสกัดกั้นโอกาสล้างพอร์ตช่วงเบิกถอนเงินทุนย่อตัว",
+        "สูตรโมเดล CPR: ทุนที่เสี่ยง (Capital at Risk) = (ราคาเข้าซื้อ - ราคา Stop Loss) * ปริมาณสัญญายูนิต เพื่อปกป้องเงินต้นจากความผันผวน",
+        "โมเดลตรงข้ามมาร์ติงเกล (Anti-Martingale) จะเพิ่มขนาดไม้ช่วงพอร์ตชนะและหั่นขนาดไม้ลงช่วงพอร์ตแพ้ เพื่อผลักดันพลังสมทบทุนและคุมเงินไหลออก",
+        "อย่าเสี่ยงเกินเปอร์เซ็นต์ที่กำหนดไว้จากพอร์ตทั้งหมด (เช่น 1% หรือ 2%) ในการเทรดครั้งเดียว เพื่อให้พอร์ตทนทานต่อการแพ้ติดต่อกันหลายไม้ได้",
+        "การกำหนดขนาดไม้ตามความผันผวน (เช่น การใช้ ATR - Average True Range) ช่วยปรับจูนตำแหน่งเทรดให้สอดรับกับความดังเสียงรบกวนของตลาด",
+        "จุดต่างระหว่างการรอดชีวิตกับการล้มละลายไม่ได้ขึ้นกับสัญญาณซื้อขาย แต่ขึ้นอยู่กับกลยุทธ์การคำนวณขนาดไม้ในช่วงที่ตลาดแพ้ต่อเนื่อง",
+        "เลเวอเรจเป็นดาบสองคม: การคำนวณ Position Sizing จะบอกเองว่าเราควรใช้เลเวอเรจในสัดส่วนเท่าไรจึงปลอดภัยจากการโดนเรียกหลักประกันเพิ่ม",
+        "แบบจำลองสัดส่วนคงที่ (Fixed Fractional Sizing) จะคำนวณขนาดไม้ให้ล้อไปกับขนาดพอร์ตปัจจุบันที่เติบโตขึ้นหรือลดลงโดยอัตโนมัติ",
+        "ต้องนำค่าความสัมพันธ์ของสินทรัพย์มาคิดคำนวณด้วย: การเปิดสถานะในสินทรัพย์หลายตัวที่วิ่งตามกันจะเท่ากับการเบิ้ลความเสี่ยงพอร์ต",
+        "มาตรวัดสุดท้ายของโมเดล Position Sizing ที่ดีคือ ความสามารถในการทำให้คุณหลับสนิทแม้จะอยู่ในช่วงที่เงินทุนลดลงต่ำสุดในอดีตก็ตาม"
       ]
     }
   },
@@ -888,14 +981,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Futures contracts require maintaining margins and are vulnerable to margin calls.",
-        "Options pricing: Black-Scholes-Merton model evaluates volatility, time, and exercise values.",
-        "Arbitrage: Price differences between spot and derivatives are quickly balanced."
+        "Futures contracts require maintaining initial and maintenance margins, exposing traders to daily mark-to-market valuations and margin calls.",
+        "Options pricing: The Black-Scholes-Merton model evaluates stock price, strike price, volatility, time to expiration, and risk-free interest rates.",
+        "Arbitrage: Price differences between the spot market and derivatives markets are quickly balanced by institutional traders seeking riskless profits.",
+        "Hedging is the practice of reducing risk in an underlying asset by taking an offsetting position in a derivative contract.",
+        "Options possess asymmetric risk profiles: option buyers have limited risk (premium paid) and unlimited potential, while sellers have the opposite.",
+        "The 'Greeks' (Delta, Gamma, Theta, Vega, Rho) measure the sensitivity of option prices to changes in stock price, volatility, and time.",
+        "Delta represents the rate of change of the option price with respect to the asset price; it acts as a proxy for the probability of expiring in-the-money.",
+        "Theta represents time decay; the value of an option decreases as it approaches expiration, which benefits option writers/sellers.",
+        "Implied Volatility (IV) reflects the market's expectation of future volatility, representing the premium or fear priced into option contracts.",
+        "Derivatives do not create risk; they transfer risk from risk-averse participants (hedgers) to risk-seeking participants (speculators)."
       ],
       th: [
-        "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สจำเป็นต้องรักษาระดับเงินประกันและเสี่ยงต่อการถูกเรียกเพิ่มประกัน (Margin Call)",
-        "สูตรราคาออปชัน: โมเดล Black-Scholes-Merton คำนวณความผันผวน ปัจจัยเวลา และราคาเป้าหมายสัญญา",
-        "อาบิทราจ (Arbitrage): ส่วนต่างราคาของตลาดสปอตและตลาดฟิวเจอร์สจะถูกหักลบปรับสมดุลอย่างรวดเร็ว"
+        "สัญญาซื้อขายล่วงหน้าฟิวเจอร์สจำเป็นต้องรักษาระดับเงินประกันขั้นต้นและเงินประกันขั้นต่ำ ทำให้ต้องรับรู้ราคาตลาดทุกวันและเสี่ยงต่อการถูกเรียกเพิ่มหลักประกัน (Margin Call)",
+        "สูตรราคาออปชัน: โมเดล Black-Scholes-Merton คำนวณราคาหุ้น ราคาใช้สิทธิ์ ความผันผวน ปัจจัยเวลาที่เหลือ และอัตราดอกเบี้ยไร้ความเสี่ยง",
+        "อาบิทราจ (Arbitrage): ส่วนต่างราคาของตลาดสปอตและตลาดฟิวเจอร์สจะถูกหักลบปรับสมดุลอย่างรวดเร็วโดยสถาบันการเงินเพื่อทำกำไรไร้ความเสี่ยง",
+        "การป้องกันความเสี่ยง (Hedging): เป็นการลดความเสียหายของสินทรัพย์หลักโดยการเปิดสถานะในทิศทางตรงกันข้ามในตลาดอนุพันธ์",
+        "ออปชันมีความไม่สมมาตรของความเสี่ยง: ฝั่งผู้ซื้อมีโอกาสขาดทุนจำกัด (แค่ค่าพรีเมียมที่จ่าย) แต่ได้กำไรไม่จำกัด ส่วนฝั่งผู้ขายมีภาระหน้าที่กลับกัน",
+        "ค่ากรีก (The Greeks: Delta, Gamma, Theta, Vega, Rho) ใช้วัดความอ่อนไหว of ราคาออปชันต่อราคาหุ้นหลัก ความผันผวน และระยะเวลา",
+        "ค่าเดลต้า (Delta) แสดงการขยับของราคาออปชันเทียบกับราคาสินทรัพย์อ้างอิง และมักถูกใช้แทนอัตราความเป็นไปได้ที่สัญญาจะหมดอายุในสภาวะได้กำไร (In-the-money)",
+        "ค่าทีต้า (Theta) คือค่าเสื่อมราคาตามเวลา: มูลค่าออปชันจะค่อยๆ ลดลงเมื่อเข้าใกล้แตะวันหมดอายุ ซึ่งเป็นประโยชน์ต่อผู้ขายออปชัน (Option Writer)",
+        "ความผันผวนโดยนัย (Implied Volatility - IV) สะท้อนความคาดหมายของตลาดต่อทิศทางอนาคต ซึ่งเป็นตัวดันราคาพรีเมียมของออปชันให้สูงขึ้นตามความตื่นตระหนก",
+        "สินทรัพย์อนุพันธ์ไม่ได้สร้างความเสี่ยงขึ้นมาใหม่ แต่เป็นเครื่องมือในการโอนย้ายความเสี่ยงจากผู้กลัวความเสี่ยง (Hedger) ไปยังผู้ที่ชอบความเสี่ยงเพื่อทำกำไร (Speculator)"
       ]
     }
   },
@@ -910,14 +1017,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Strategic asset allocation determines over 90% of portfolio performance variance.",
-        "Correlation: Combine assets with negative or low correlation to smooth out returns.",
-        "Rebalancing: Sell winners and buy losers back to target weights to boost returns."
+        "Strategic asset allocation determines over 90% of a portfolio's long-term performance variance, rather than individual stock selection or market timing.",
+        "Correlation: Combine assets with negative or low correlation (such as stocks and bonds) to smooth out returns and reduce overall drawdown.",
+        "Rebalancing: Periodically sell high-performing assets and buy underperforming ones back to target weights to boost returns and manage risk.",
+        "Risk and return are inextricably linked; you cannot achieve higher long-term returns without accepting greater volatility and short-term risk.",
+        "The 'efficient frontier' represents the set of optimal portfolios that offer the highest expected return for a defined level of risk.",
+        "Index funds and passive investing are the most reliable ways for individual investors to capture broad market returns at low costs.",
+        "Diversification is the only 'free lunch' in finance, allowing you to reduce risk without necessarily sacrificing expected portfolio returns.",
+        "Behavioral mistakes, such as panic selling during a bear market, are the single greatest threat to an investor's long-term compounding.",
+        "Focus on the behavior of the entire portfolio, not the individual components; a single asset falling in value is fine if the portfolio is rising.",
+        "The key to successful asset allocation is the discipline to stick to your long-term plan through both bull and bear markets."
       ],
       th: [
-        "การวางกลยุทธ์สัดส่วนพอร์ตตัวกำหนดความผันผวนผลตอบแทนมากกว่า 90% ของระยะยาว",
-        "ค่าสหสัมพันธ์ (Correlation): รวมสินทรัพย์ที่ไม่มีสัญญาสอดคล้องกันเพื่อเกลี่ยเส้นเงินทุนไม่ให้แกว่งชัน",
-        "การปรับพอร์ต (Rebalancing): ขายส่วนที่วิ่งแรงเพื่อนำไปซื้อเพิ่มตัวที่ยังย่อช่วยสร้างผลตอบแทนส่วนเกิน"
+        "การจัดสรรสินทรัพย์เชิงกลยุทธ์ (Strategic Asset Allocation) กำหนดความแกว่งตัวของผลตอบแทนพอร์ตในระยะยาวมากกว่า 90% ไม่ใช่การคัดเลือกหุ้นหรือการจับจังหวะตลาด",
+        "สหสัมพันธ์ (Correlation): รวมสินทรัพย์ที่มีความสัมพันธ์ต่ำหรือตรงกันข้าม (เช่น หุ้นและตราสารหนี้) เพื่อเกลี่ยเส้นเงินทุนไม่ให้แกว่งชันและลดระดับการปรับฐานของพอร์ต",
+        "การปรับพอร์ต (Rebalancing): ขายส่วนที่วิ่งแรงเพื่อนำไปซื้อเพิ่มตัวที่ยังย่อตัว เพื่อรักษาสัดส่วนเป้าหมายและช่วยสร้างผลตอบแทนส่วนเกินระยะยาว",
+        "ความเสี่ยงและผลตอบแทนเป็นของคู่กัน: คุณไม่สามารถคาดหวังผลตอบแทนที่สูงในระยะยาวได้โดยไม่ยินดีรับความผันผวนและการติดลบชั่วคราว",
+        "เส้นขอบเขตประสิทธิภาพ (Efficient Frontier) คือชุดของพอร์ตโฟลิโอในอุดมคติที่ให้ผลตอบแทนคาดหวังสูงสุด ณ ระดับความเสี่ยงหนึ่งๆ",
+        "กองทุนดัชนี (Index Funds) และการลงทุนแบบพาสซีฟเป็นวิธีการที่เชื่อถือได้มากที่สุดสำหรับนักลงทุนรายย่อยในการเก็บเกี่ยวผลตอบแทนตลาดด้วยต้นทุนที่ต่ำ",
+        "การกระจายความเสี่ยง (Diversification) คือ \"ของฟรีอย่างเดียว\" ในโลกการเงิน ช่วยลดความเสี่ยงโดยไม่ลดทอนผลตอบแทนคาดหวังของพอร์ตลง",
+        "ข้อผิดพลาดทางพฤติกรรม เช่น การตกใจเทขายในช่วงตลาดหมี คือภัยคุกคามที่ใหญ่ที่สุดต่อพลังดอกเบี้ยทบต้นระยะยาวของนักลงทุน",
+        "จงโฟกัสที่พฤทีภาพรวมของพอร์ตโฟลิโอ ไม่ใช่สินทรัพย์ตัวใดตัวหนึ่ง: การที่สินทรัพย์หนึ่งตัวราคาตกเป็นเรื่องปกติหากภาพรวมพอร์ตยังเติบโตตามเป้า",
+        "หัวใจสำคัญของการจัดสรรสินทรัพย์คือวินัยในการปฏิบัติตามแผนระยะยาวอย่างเคร่งครัด ทั้งในช่วงตลาดกระทิงรุ่งเรืองและตลาดหมีตื่นตระหนก"
       ]
     }
   },
@@ -932,14 +1053,28 @@ export const referenceBooks: BookInfo[] = [
     },
     keyPoints: {
       en: [
-        "Rule 1: Always cut losses. Never let a small loss escalate to account ruin.",
-        "Focus on system design validation and ensure it survives historical drawdowns.",
-        "Maintain absolute psychological control and execute signals without hesitation."
+        "Rule 1: Always cut losses. Never, under any circumstances, let a small loss escalate to a size that ruins the trading account.",
+        "Focus on system design validation and ensure it has positive expectancy and survives historical drawdowns before risking real money.",
+        "Maintain absolute psychological control and execute trading signals without hesitation, ignoring greed, fear, and opinion.",
+        "The three pillars of successful trading are: methodology (your setup), money management (your position sizing), and psychology (your discipline).",
+        "Understand the reality of trading: most retail traders lose money because they lack a proven system and trade with bad money management.",
+        "A trading plan must cover all eventualities: what to trade, when to enter, when to exit (at a loss or profit), and how much to trade.",
+        "Risk of Ruin: You must calculate your probability of going broke; even with a winning strategy, bad risk management can lead to 100% ruin.",
+        "Keep trading simple; complex systems are harder to execute, more prone to curve-fitting, and fail more quickly in changing markets.",
+        "Review your trades constantly: maintain a detailed trading journal to monitor your compliance with the plan and analyze errors.",
+        "Trading is a business: treat it with professional dedication, control your operating expenses (losses and slippage), and focus on longevity."
       ],
       th: [
-        "กฎข้อที่ 1: ตัดขาดทุนตามแผนเสมอ อย่าปล่อยให้ยอดเสียหายเล็กๆ ลามไปจนพังบัญชีพอร์ตการลงทุน",
-        "โฟกัสไปที่สถิติตัวเลขในอดีต และดูว่าระบบเทรดนี้จะเอาตัวรอดช่วงดรอว์ดาวน์ในอดีตได้จริงหรือไม่",
-        "ควบคุมจิตวิทยาส่วนตัวอย่างเด็ดขาด และดำเนินการตามหน้าเทรดทันทีเมื่อสัญญาณปรากฏ"
+        "กฎข้อที่ 1: ตัดขาดทุนตามแผนเสมอ อย่าปล่อยให้ยอดเสียหายเล็กๆ ลามไปจนทำลายบัญชีพอร์ตการลงทุนเป็นอันขาด",
+        "โฟกัสการทดสอบระบบเทรดและพิสูจน์ให้เห็นว่าระบบมีค่าคาดหวังเป็นบวก และสามารถผ่านพ้นช่วงดรอว์ดาวน์ในอดีตได้ก่อนจะลงเงินจริง",
+        "ควบคุมจิตวิทยาของตัวเองอย่างเด็ดขาด ปฏิบัติตามสัญญาณซื้อขายทันทีเมื่อเงื่อนไขครบถ้วน โดยตัดความโลภ ความกลัว และความคิดเห็นส่วนตัวออกไป",
+        "สามเสาหลักของการเทรดที่ประสบความสำเร็จประกอบด้วย: รูปแบบวิธีการเทรด (Methodology), การบริหารหน้าตักเงินทุน (Money Management) และจิตวิทยาควบคุมวินัย (Psychology)",
+        "เข้าใจความเป็นจริงของตลาด: นักเทรดรายย่อยส่วนใหญ่ล้มเหลวขาดทุนเพราะขาดระบบเทรดที่ผ่านการพิสูจน์และเทรดด้วยการบริหารเงินที่ย่ำแย่",
+        "แผนการเทรดที่ดีต้องครอบคลุมทุกเหตุการณ์: จะเทรดอะไร, เข้าซื้อเมื่อไร, จะยอมแพ้จุดไหน, จะทำกำไรอย่างไร และจะเทรดขนาดไม้ใหญ่เท่าใด",
+        "โอกาสในการล้างพอร์ต (Risk of Ruin): คุณต้องคำนวณโอกาสที่เงินทุนจะหมดสิ้น แม้ระบบจะมีอัตราชนะดีแค่ไหนแต่การจัดการความเสี่ยงที่แย่ก็นำไปสู่การล้างพอร์ตได้ 100%",
+        "รักษาความเรียบง่ายในการเทรดไว้: ระบบที่ซับซ้อนเกินไปจะรันจริงยาก เสี่ยงต่อการแต่งตัวเลขในอดีต และมักจะพังทลายอย่างรวดเร็วเมื่อพฤติกรรมตลาดเปลี่ยน",
+        "ตรวจสอบการเทรดของตัวเองอย่างสม่ำเสมอ: จดบันทึกประวัติการเทรด (Trading Journal) อย่างละเอียดเพื่อประเมินความมีวินัยและวิเคราะห์ข้อผิดพลาด",
+        "มองการเทรดเป็นธุรกิจหนึ่ง: บริหารด้วยความทุ่มเทแบบมืออาชีพ ควบคุมค่าใช้จ่ายในการดำเนินงาน (การขาดทุนและค่าธรรมเนียม) และมุ่งเน้นที่การอยู่รอดในระยะยาว"
       ]
     }
   }
